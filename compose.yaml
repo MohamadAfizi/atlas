@@ -7,3 +7,9 @@ services:
       - ./src:/var/www/html
       - ./data:/data
     restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
